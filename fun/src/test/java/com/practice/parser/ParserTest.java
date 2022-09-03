@@ -7,6 +7,7 @@ import com.google.common.io.Files;
 import com.practice.TestUtils;
 import com.practice.store.EmployeeStore;
 import com.practice.store.IEmployeeStore;
+import com.practice.store.StoreFactory;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -26,7 +27,7 @@ public class ParserTest  {
   public void setup() throws IOException {
     final File tmpDir = Files.createTempDir();
     final String filePath = tmpDir.getAbsolutePath() + PS + UUID.randomUUID();
-    store = new EmployeeStore();
+    store = StoreFactory.get().getEmployeeStore();
     parser = new Parser(TestUtils.getLineReader(filePath), store);
     employeeService = new EmployeeService(store);
 
@@ -34,6 +35,7 @@ public class ParserTest  {
 
   @After
   public void tearDown() {
+    StoreFactory.get().clear();
     store = null;
     parser = null;
     employeeService = null;

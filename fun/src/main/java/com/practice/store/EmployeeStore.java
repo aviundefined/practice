@@ -6,6 +6,9 @@ import java.util.Map;
 
 public class EmployeeStore implements IEmployeeStore{
 
+  EmployeeStore() {
+
+  }
   private final Map<Integer, Employee> employeeMap = new HashMap<>();
   @Override
   public int save(Employee employee) {
@@ -16,5 +19,10 @@ public class EmployeeStore implements IEmployeeStore{
   @Override
   public Employee get(int id) {
     return employeeMap.get(id);
+  }
+
+  @Override
+  public void clear() {
+    this.employeeMap.clear();
   }
 }

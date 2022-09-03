@@ -1,7 +1,6 @@
 package com.practice.common;
 
 import java.util.Collection;
-import java.util.List;
 
 public final class NullOrEmpty {
   private NullOrEmpty() {

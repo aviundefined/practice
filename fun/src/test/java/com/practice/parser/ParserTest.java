@@ -5,14 +5,12 @@ import static com.practice.TestUtils.PS;
 
 import com.google.common.io.Files;
 import com.practice.TestUtils;
-import com.practice.model.Employee;
 import com.practice.store.EmployeeStore;
 import com.practice.store.IEmployeeStore;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

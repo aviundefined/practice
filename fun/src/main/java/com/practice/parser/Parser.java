@@ -38,7 +38,7 @@ public class Parser {
           employee.addSubordinate(Integer.parseInt(str));
         }
         employees.add(store.save(employee));
-      }catch (Exception e) {
+      } catch (Exception e) {
         System.err.println("Error in parsing record: " + e);
       }
     }

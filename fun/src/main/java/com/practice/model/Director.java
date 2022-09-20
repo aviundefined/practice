@@ -1,6 +1,6 @@
 package com.practice.model;
 
-public final class Director extends Employee {
+public final class Director extends BaseManager {
 
   private String department;
   public Director(int id, String name) {
@@ -13,14 +13,5 @@ public final class Director extends Employee {
 
   public final void setDepartment(String department) {
     this.department = department;
-  }
-
-  @Override
-  public String toString() {
-    return "Director{" +
-        "department='" + department + '\'' +
-        ", name='" + name + '\'' +
-        ", subordinates=" + subordinates +
-        '}';
   }
 }

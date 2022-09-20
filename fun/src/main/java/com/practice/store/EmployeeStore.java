@@ -1,6 +1,6 @@
 package com.practice.store;
 
-import com.practice.model.Employee;
+import com.practice.model.BaseEmployee;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,15 +9,15 @@ public class EmployeeStore implements IEmployeeStore{
   EmployeeStore() {
 
   }
-  private final Map<Integer, Employee> employeeMap = new HashMap<>();
+  private final Map<Integer, BaseEmployee> employeeMap = new HashMap<>();
   @Override
-  public int save(Employee employee) {
+  public int save(BaseEmployee employee) {
     this.employeeMap.put(employee.getId(), employee);
     return employee.getId();
   }
 
   @Override
-  public Employee get(int id) {
+  public BaseEmployee get(int id) {
     return employeeMap.get(id);
   }
 

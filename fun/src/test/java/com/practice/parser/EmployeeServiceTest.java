@@ -8,6 +8,7 @@ import com.google.common.io.Files;
 import com.practice.TestUtils;
 import com.practice.store.IEmployeeStore;
 import com.practice.store.StoreFactory;
+import com.practice.store.StoreFactory.StoreType;
 import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
@@ -20,13 +21,13 @@ public class EmployeeServiceTest {
 
   private EmployeeService service;
   private IEmployeeStore store;
-  private Parser parser;
+  private EmployeeParser employeeParser;
   @Before
   public void setUp() throws IOException {
-    store = StoreFactory.get().getEmployeeStore();
+    store = StoreFactory.get().getEmployeeStore(StoreType.IN_MEMORY );
     final String filePath = Files.createTempDir() + PS + UUID.randomUUID();
-    parser = new Parser(TestUtils.getLineReader(filePath), store);
-    parser.parse();
+    employeeParser = new EmployeeParser(TestUtils.getLineReader(filePath), store);
+    employeeParser.parse();
     service = new EmployeeService(store);
   }
 

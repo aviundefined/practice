@@ -1,9 +1,9 @@
 package com.practice.store;
 
-import com.practice.model.Employee;
+import com.practice.model.BaseEmployee;
 
 public interface IEmployeeStore {
-  int save(final Employee employee);
-  Employee get(final int id);
+  int save(final BaseEmployee employee);
+  BaseEmployee get(final int id);
   void clear();
 }

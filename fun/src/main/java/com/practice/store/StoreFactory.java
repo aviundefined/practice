@@ -4,9 +4,14 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 public class StoreFactory {
-  private static final String EMPLOYEE_STORE_KEY = "EMPLOYEE_STORE_KEY";
+
+  public enum StoreType {
+    IN_MEMORY,
+    DB
+  }
   private static volatile StoreFactory instance;
-  private final ConcurrentMap<String, IEmployeeStore> employeeStores = new ConcurrentHashMap<>();
+
+  private final ConcurrentMap<StoreType, IEmployeeStore> employeeStores = new ConcurrentHashMap<>();
   private StoreFactory() {
 
   }
@@ -21,8 +26,8 @@ public class StoreFactory {
     return instance;
   }
 
-  public final IEmployeeStore getEmployeeStore() {
-    return this.employeeStores.computeIfAbsent(EMPLOYEE_STORE_KEY, k -> new EmployeeStore());
+  public final IEmployeeStore getEmployeeStore(StoreType storeType) {
+    return this.employeeStores.computeIfAbsent(storeType, k -> new EmployeeStore());
   }
 
   public final void clear() {

@@ -48,6 +48,7 @@ public String getEmployeeSummary(final int id) {
 }
 private String getEmployeeDetailsWithoutSubordinates(final BaseEmployee employee) {
   final StringBuilder sb  = new StringBuilder();
+  sb.append("Id: ").append(employee.getId()).append(", ");
   sb.append("Name: ").append(employee.getName()).append(", ");
   sb.append("Type: ").append(employee.getType());
   if(employee.getType() == Type.DIRECTOR) {

@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class TestUtils {
   public static final String PS = File.pathSeparator;
-  public static ILineReader getLineReader(final String filePath) throws IOException {
+  public static IDataProvider getLineReader(final String filePath) throws IOException {
     try (final BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
       bw.write("5");
       bw.newLine();
@@ -57,6 +57,6 @@ public class TestUtils {
       bw.newLine();
       bw.write("2");
     }
-    return new LineReader(filePath);
+    return new DataProviderFileImpl(filePath);
   }
 }

@@ -6,11 +6,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 
-public final class LineReader implements ILineReader{
+public final class DataProviderFileImpl implements IDataProvider {
   private final Iterator<String> itr;
   private final BufferedReader br;
 
-  public LineReader(final String filePath) throws FileNotFoundException {
+  public DataProviderFileImpl(final String filePath) throws FileNotFoundException {
     this.br = new BufferedReader(new FileReader(filePath));
     this.itr = this.br.lines().iterator();
   }

@@ -12,7 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class LineReaderTest {
-  private ILineReader reader;
+  private IDataProvider reader;
   @Before
   public void setup() throws IOException {
     final File tmpDir = Files.createTempDir();

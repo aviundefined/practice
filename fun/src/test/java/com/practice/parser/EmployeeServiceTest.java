@@ -1,17 +1,13 @@
 package com.practice.parser;
 
 
-import static com.practice.TestUtils.PS;
-
 import com.google.common.collect.Lists;
-import com.google.common.io.Files;
 import com.practice.TestUtils;
 import com.practice.store.IEmployeeStore;
 import com.practice.store.StoreFactory;
 import com.practice.store.StoreFactory.StoreType;
 import java.io.IOException;
 import java.util.List;
-import java.util.UUID;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

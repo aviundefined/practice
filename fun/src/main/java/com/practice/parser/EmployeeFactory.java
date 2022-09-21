@@ -1,9 +1,9 @@
 package com.practice.parser;
 
-import com.practice.model.Coder;
-import com.practice.model.Director;
 import com.practice.model.BaseEmployee;
 import com.practice.model.BaseEmployee.Type;
+import com.practice.model.Coder;
+import com.practice.model.Director;
 import com.practice.model.Manager;
 
 public class EmployeeFactory {

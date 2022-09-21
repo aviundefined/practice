@@ -1,10 +1,10 @@
 package com.practice.parser;
 
 import com.practice.common.NullOrEmpty;
-import com.practice.model.BaseManager;
-import com.practice.model.Director;
 import com.practice.model.BaseEmployee;
 import com.practice.model.BaseEmployee.Type;
+import com.practice.model.BaseManager;
+import com.practice.model.Director;
 import com.practice.store.IEmployeeStore;
 import java.util.ArrayList;
 import java.util.List;

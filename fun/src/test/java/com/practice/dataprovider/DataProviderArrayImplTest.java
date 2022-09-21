@@ -1,12 +1,7 @@
 package com.practice.dataprovider;
 
-import static com.practice.TestUtils.PS;
-
-import com.google.common.io.Files;
 import com.practice.TestUtils;
-import java.io.File;
 import java.io.IOException;
-import java.util.UUID;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

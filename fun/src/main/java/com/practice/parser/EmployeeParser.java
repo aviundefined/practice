@@ -6,12 +6,13 @@ import com.practice.model.BaseManager;
 import com.practice.model.Director;
 import com.practice.model.BaseEmployee;
 import com.practice.model.BaseEmployee.Type;
+import com.practice.model.Orgnization;
 import com.practice.store.IEmployeeStore;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeParser {
+public class EmployeeParser implements IEmployeeParser {
   private final ILineReader dataProvider;
   private final IEmployeeStore employeeStore;
   public EmployeeParser(ILineReader dataProvider, IEmployeeStore employeeStore) {
@@ -19,7 +20,7 @@ public class EmployeeParser {
     this.employeeStore = employeeStore;
   }
 
-  public final List<Integer> parse() throws IOException {
+  public final Orgnization parse() throws IOException {
     final List<Integer> employees = new ArrayList<>();
     while (dataProvider.hasNext()) {
       try {
@@ -48,6 +49,6 @@ public class EmployeeParser {
       }
     }
     dataProvider.close();
-    return employees;
+    return new Orgnization(employees);
   }
 }

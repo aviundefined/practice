@@ -9,7 +9,7 @@ import com.practice.store.IEmployeeStore;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class EmployeeService {
+public final class EmployeeService implements IEmployeeService {
 private final IEmployeeStore store;
 
 public EmployeeService(final IEmployeeStore store) {

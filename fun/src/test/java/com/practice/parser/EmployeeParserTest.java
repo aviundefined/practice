@@ -5,6 +5,7 @@ import static com.practice.TestUtils.PS;
 
 import com.google.common.io.Files;
 import com.practice.TestUtils;
+import com.practice.model.Orgnization;
 import com.practice.store.IEmployeeStore;
 import com.practice.store.StoreFactory;
 import com.practice.store.StoreFactory.StoreType;
@@ -43,10 +44,9 @@ public class EmployeeParserTest {
 
   @Test
   public void testParse() throws IOException {
-    final List<Integer> employees = employeeParser.parse();
-    System.out.println("employees: "+employees);
-    final List<String> employeesSummary = employeeService.getEmployeesSummary(employees);
+    final Orgnization org = employeeParser.parse();
+    final List<String> employeesSummary = employeeService.getEmployeesSummary(org.getEmployeeIds());
     System.out.println("employeesSummary: "+employeesSummary);
-    Assert.assertEquals(employees.size(), employeesSummary.size());
+    Assert.assertEquals(org.getEmployeeIds().size(), employeesSummary.size());
   }
 }

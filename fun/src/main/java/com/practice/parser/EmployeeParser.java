@@ -1,6 +1,6 @@
 package com.practice.parser;
 
-import com.practice.IDataProvider;
+import com.practice.dataprovider.IDataProvider;
 import com.practice.common.NullOrEmpty;
 import com.practice.model.BaseManager;
 import com.practice.model.Director;

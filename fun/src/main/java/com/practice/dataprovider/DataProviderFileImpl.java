@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.dataprovider;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

@@ -1,5 +1,6 @@
 package com.practice;
 
+import com.practice.dataprovider.DataProviderArrayImpl;
 import com.practice.dataprovider.DataProviderFileImpl;
 import com.practice.dataprovider.IDataProvider;
 import java.io.BufferedWriter;
@@ -60,5 +61,11 @@ public class TestUtils {
       bw.write("2");
     }
     return new DataProviderFileImpl(filePath);
+  }
+
+  public static IDataProvider getDataProviderArrayImpl() {
+    final String[] tokens = {"5","Avinash","Coder","","4","Ashwin","Coder","","3","Vishal","Coder","","2","Abhishek","Manager","3","4","5","","1","Kamasakshi","Director","Engineering",
+      "2"};
+    return new DataProviderArrayImpl(tokens);
   }
 }

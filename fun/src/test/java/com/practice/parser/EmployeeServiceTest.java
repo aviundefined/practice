@@ -25,8 +25,7 @@ public class EmployeeServiceTest {
   @Before
   public void setUp() throws IOException {
     store = StoreFactory.get().getEmployeeStore(StoreType.IN_MEMORY );
-    final String filePath = Files.createTempDir() + PS + UUID.randomUUID();
-    employeeParser = new EmployeeParser(TestUtils.getLineReader(filePath), store);
+    employeeParser = new EmployeeParser(TestUtils.getDataProviderArrayImpl(), store);
     employeeParser.parse();
     service = new EmployeeService(store);
   }

@@ -1,10 +1,9 @@
-package com.practice;
-
+package com.practice.dataprovider;
 
 import static com.practice.TestUtils.PS;
 
 import com.google.common.io.Files;
-import com.practice.dataprovider.IDataProvider;
+import com.practice.TestUtils;
 import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
@@ -12,13 +11,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class LineReaderTest {
+public class DataProviderArrayImplTest {
+
   private IDataProvider reader;
   @Before
   public void setup() throws IOException {
-    final File tmpDir = Files.createTempDir();
-    final String filePath = tmpDir.getAbsolutePath() + PS + UUID.randomUUID();
-    this.reader = TestUtils.getLineReader(filePath);
+    this.reader = TestUtils.getDataProviderArrayImpl();
   }
 
   @After

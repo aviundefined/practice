@@ -35,6 +35,8 @@ public class EmployeeServiceTest {
   public void tearDown() {
     StoreFactory.get().clear();
     service = null;
+    store = null;
+    employeeParser = null;
   }
 
   @Test

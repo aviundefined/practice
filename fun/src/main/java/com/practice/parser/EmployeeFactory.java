@@ -9,6 +9,10 @@ import com.practice.model.Manager;
 public class EmployeeFactory {
 
   private static volatile EmployeeFactory instance;
+
+  private EmployeeFactory() {
+    // Important: Private constructor for singleton pattern.
+  }
   public static EmployeeFactory get() {
     if(instance == null) {
       synchronized (EmployeeFactory.class) {

@@ -15,12 +15,12 @@ public final class LineReader implements ILineReader{
     this.itr = this.br.lines().iterator();
   }
   @Override
-  public final boolean hasNext() {
+  public boolean hasNext() {
    return itr.hasNext();
   }
 
   @Override
-  public final String next() {
+  public String next() {
     return itr.next();
   }
 

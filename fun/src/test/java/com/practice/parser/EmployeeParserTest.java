@@ -20,9 +20,9 @@ import org.junit.Test;
 
 public class EmployeeParserTest {
 
-  private EmployeeParser employeeParser;
+  private IEmployeeParser employeeParser;
   private IEmployeeStore store;
-  private EmployeeService employeeService;
+  private IEmployeeService employeeService;
 
   @Before
   public void setup() throws IOException {

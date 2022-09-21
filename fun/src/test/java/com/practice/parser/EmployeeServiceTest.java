@@ -19,9 +19,9 @@ import org.junit.Test;
 
 public class EmployeeServiceTest {
 
-  private EmployeeService service;
+  private IEmployeeService service;
   private IEmployeeStore store;
-  private EmployeeParser employeeParser;
+  private IEmployeeParser employeeParser;
   @Before
   public void setUp() throws IOException {
     store = StoreFactory.get().getEmployeeStore(StoreType.IN_MEMORY );

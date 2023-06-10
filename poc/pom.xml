@@ -15,6 +15,38 @@
     <maven.compiler.source>15</maven.compiler.source>
     <maven.compiler.target>15</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <snowflake-jdbc.version>3.13.23</snowflake-jdbc.version>
+    <dropwizard-guicey.version>5.6.1</dropwizard-guicey.version>
+    <redisson.version>3.17.7</redisson.version>
+    <lombok.version>1.18.16</lombok.version>
   </properties>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/net.snowflake/snowflake-jdbc -->
+    <dependency>
+      <groupId>net.snowflake</groupId>
+      <artifactId>snowflake-jdbc</artifactId>
+      <version>${snowflake-jdbc.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/ru.vyarus/dropwizard-guicey -->
+    <dependency>
+      <groupId>ru.vyarus</groupId>
+      <artifactId>dropwizard-guicey</artifactId>
+      <version>${dropwizard-guicey.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
+    <dependency>
+      <groupId>org.redisson</groupId>
+      <artifactId>redisson</artifactId>
+      <version>${redisson.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 
 </project>

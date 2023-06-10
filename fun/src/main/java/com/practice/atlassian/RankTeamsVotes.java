@@ -7,11 +7,11 @@ public class RankTeamsVotes {
   public String rankTeams(String[] votes) {
     // ["ABC","ACB","ABC","ACB","ACB"]
     /*
-      A 5 0 0
-      B 0 2 3
-      C 0 3 2
+      5 0 0 A
+      0 2 3 B
+      0 3 2 C
      */
-    final int n = votes.length;
+    final int n = votes[0].length();
     final int[][] count = new int[26][n+ 1];
     for (int i = 0; i < 26; i++) {
       count[i][n] = i;
